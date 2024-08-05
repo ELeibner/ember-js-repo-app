@@ -1,0 +1,122 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: #f6f8fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow:
+    0 1px 3px rgba(27, 31, 35, 12%),
+    0 1px 2px rgba(27, 31, 35, 24%);
+  border: 1px solid #e1e4e8;
+}
+
+.top-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form input[type="text"],
+form select {
+  padding: 8px;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button {
+  padding: 8px 15px;
+  border: 1px solid rgba(27, 31, 35, 15%);
+  background: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+  background-color: #fafbfc;
+  color: #24292e;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button:hover {
+  background-color: #e1e4e8;
+  border-color: rgba(27, 31, 35, 35%);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  box-shadow:
+    0 1px 3px rgba(27, 31, 35, 12%),
+    0 1px 2px rgba(27, 31, 35, 24%);
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+}
+
+button.toggle {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+ul.branches {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+ul.branches li {
+  padding: 5px 0;
+  border: none;
+  box-shadow: none;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+}

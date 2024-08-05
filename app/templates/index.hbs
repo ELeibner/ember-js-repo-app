@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="top-form">
+    <form {{on "submit" this.loadRepos}}>
+      <label for="orgName">Organization:</label>
+      <input
+        id="orgName"
+        type="text"
+        placeholder="Enter org name"
+        {{on "input" this.updateOrgName}}
+      />
+      <label for="token">API Token:</label>
+      <input
+        id="token"
+        type="text"
+        placeholder="Enter API token"
+        {{on "input" this.updateToken}}
+      />
+      <button type="submit">Search</button>
+    </form>
+    <Filters @filterRepos={{this.filterRepos}} />
+  </div>
+  {{#if this.errorMessage}}
+    <div class="error-message">
+      {{this.errorMessage}}
+    </div>
+  {{/if}}
+  <List @repos={{this.filteredRepos}} />
+</div>

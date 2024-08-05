@@ -1,0 +1,16 @@
+<form {{on "submit" this.applyFilters}} class="filters">
+  <label for="language">Language:</label>
+  <input
+    id="language"
+    type="text"
+    placeholder="Filter by language"
+    {{on "input" this.updateLanguage}}
+  />
+  <label for="visibility">Visibility:</label>
+  <select id="visibility" {{on "change" this.updateVisibility}}>
+    <option value="">Both</option>
+    <option value="public">Public</option>
+    <option value="private">Private</option>
+  </select>
+  <button type="submit">Apply</button>
+</form>

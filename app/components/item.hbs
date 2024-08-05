@@ -1,0 +1,25 @@
+<li>
+  <h2>{{@repo.name}}</h2>
+  <p>
+    <a href={{@repo.html_url}} target="_blank" rel="noopener noreferrer">View on
+      GitHub</a>
+    <br />
+    Language:
+    {{@repo.language}}
+    <br />
+    Visibility:
+    {{if @repo.private "Private" "Public"}}
+    <br />
+    Number of branches:
+    {{@repo.branches.length}}
+  </p>
+  <button type="button" class="toggle" {{on "click" this.toggleBranches}}>Toggle
+    Branches</button>
+  {{#if this.showBranches}}
+    <ul class="branches">
+      {{#each @repo.branches as |branch|}}
+        <li>{{branch.name}}</li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</li>
